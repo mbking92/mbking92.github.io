@@ -4,7 +4,7 @@ title: Give Me Some Credit
 ---
 I did classification.
 
-'''
+``
 test<-read.csv("cs-test.csv", header=TRUE,sep=",")
 train<-read.csv("cs-training.csv",header=TRUE,sep=",")
 train$SeriousDlqin2yrs<-factor(train$SeriousDlqin2yrs)
@@ -22,6 +22,6 @@ CrossTable(train$SeriousDlqin2yrs, model2pred,prop.chisq = FALSE, prop.c = FALSE
 submit<-data.frame(Id=Id$X, Probability=model2pred)
 write.csv(submit, file = "kaggleentry1.csv", row.names = FALSE)
 plot(model2)
-'''
+``
 
 [My R Code](https://github.com/mbking92/kaggle/blob/master/firstkagglecredit.R) 
